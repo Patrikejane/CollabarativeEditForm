@@ -1,0 +1,20 @@
+<div class="group realtimedb">
+  <h2>Angular real time</h2>
+  <div class="input-group half left">
+      <label>Firstname</label>
+      <input type="text" id="firstname" [ngModel]="firstname" (ngModelChange)="handleFnameChange($event)" />
+  </div>
+  <div class="input-group half">
+      <label>Lastname</label>
+      <input type="text" id="lastname" [ngModel]="lastname" (ngModelChange)="handleLnameChange($event)" />
+  </div>
+</div>
+
+<select name="dname" [ngModel]="dname" (ngModelChange)="handleDropChange($event)">
+  <option *ngFor="let prf of name" [ngValue]="prf">
+      {{ prf }}
+  </option>
+</select> 
+
+<textarea style="background-color:rgb(224, 223, 223);color:rgb(0, 0, 0);" [(ngModel)]='rapidPageValue' (ngModelChange)="handleTextChange($event)" rows="30" cols="120">                             
+</textarea>
